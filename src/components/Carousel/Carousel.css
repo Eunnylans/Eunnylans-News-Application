@@ -1,0 +1,44 @@
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel-item {
+    min-width: 300px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    text-align: left;
+  }
+  
+  .news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .news-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .news-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
