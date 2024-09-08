@@ -2,21 +2,26 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in width */
   }
   
   .carousel-item {
     min-width: 300px;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     scroll-snap-align: center;
     text-align: left;
+    box-sizing: border-box; /* Prevents overflow due to padding */
   }
   
+  /* Set uniform height for images and maintain aspect ratio */
   .news-image {
     width: 100%;
-    height: auto;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
     border-radius: 8px;
   }
   

@@ -2,6 +2,9 @@
     background-color: #007BFF;
     padding: 15px;
     text-align: center;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove any margin */
+    box-sizing: border-box; /* Prevents overflow due to padding */
   }
   
   .navbar-brand h1 {

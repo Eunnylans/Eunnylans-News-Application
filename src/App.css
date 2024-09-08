@@ -1,15 +1,29 @@
+/* Ensure body and html do not overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden;   /* Prevent vertical scrolling */
+  box-sizing: border-box;
+}
+
 /* Global styles */
 .app-container {
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  flex-direction: column; /* Stack components vertically */
 }
 
 /* Loading state */
 .loading {
   font-size: 1.5rem;
   text-align: center;
+  margin-top: 20px;
 }
 
 /* Responsive styles */
