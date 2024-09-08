@@ -13,12 +13,15 @@ function App() {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [filters, setFilters] = useState({ category: 'business', country: 'us' });
 
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`${API_URL}?api_token=${API_TOKEN}&locale=us&limit=3&page=${page}`);
+        const response = await axios.get(
+          `${API_URL}?api_token=${API_TOKEN}&locale=${filters.country}&category=${filters.category}&limit=3&page=${page}`
+        );
         setNews(response.data.data);
       } catch (error) {
         console.error("Error fetching news", error);
@@ -27,14 +30,14 @@ function App() {
       }
     };
     fetchNews();
-  }, [page]);
+  }, [page, filters]); // Add filters to the dependency array
 
   const nextPage = () => setPage((prevPage) => prevPage + 1);
   const prevPage = () => setPage((prevPage) => Math.max(prevPage - 1, 1));
 
   return (
     <div className="app-container">
-      <Navbar />
+      <Navbar  setFilters={setFilters}/>
 
       {loading ? (
         <div className="loading">Loading...</div>
