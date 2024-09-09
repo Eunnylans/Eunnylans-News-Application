@@ -1,10 +1,8 @@
 .carousel-container {
-    display: flex;
-    overflow-x: scroll; /* Enables horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Enables snapping to each item */
-    -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling */
+    position: relative;
+    max-width: 100%;
+    margin: auto;
   }
-  
   .carousel-item {
     min-width: 100%; /* Ensures each item takes up full width */
     scroll-snap-align: start; /* Snaps to the start of each item */
@@ -40,5 +38,29 @@
   
   .read-more:hover {
     text-decoration: underline;
+  }
+  
+
+
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #007BFF; /* Active dot color */
   }
   
