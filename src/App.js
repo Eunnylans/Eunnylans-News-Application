@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.css"; // Import global CSS
 
 const API_URL = "https://api.thenewsapi.com/v1/news/top";
-const API_TOKEN = process.env.REACT_APP_API_KEY;
+const API_TOKEN = "rrr7XMdgT0joRlp66Rx4PqRYouHgF8qJG2rxj6UG";
 
 
 function App() {
