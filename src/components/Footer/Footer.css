@@ -1,10 +1,10 @@
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     background-color: #f1f1f1;
     color: #333;
     width: 100%; /* Full width */
     box-sizing: border-box; /* Prevent overflow */
-    margin-top: 20px;
+    margin-top: 10px;
   }
   

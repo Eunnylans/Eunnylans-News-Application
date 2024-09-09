@@ -1,5 +1,6 @@
 .carousel-container {
     display: flex;
+    flex-direction: column;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     width: 100%; /* Full width */
