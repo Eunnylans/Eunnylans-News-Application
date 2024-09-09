@@ -1,47 +1,41 @@
 .carousel-container {
     display: flex;
-    flex-direction: column;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    overflow-x: scroll; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enables snapping to each item */
+    -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling */
   }
   
   .carousel-item {
-    min-width: 300px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: center;
-    text-align: left;
-    box-sizing: border-box; /* Prevents overflow due to padding */
+    min-width: 100%; /* Ensures each item takes up full width */
+    scroll-snap-align: start; /* Snaps to the start of each item */
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
-  /* Set uniform height for images and maintain aspect ratio */
   .news-image {
     width: 100%;
-    height: 250px; /* Set a fixed height */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-    border-radius: 8px;
+    height: auto;
+    max-width: 600px; /* Limit the image size */
   }
   
   .news-title {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 16px 0;
   }
   
   .news-description {
     font-size: 1rem;
-    color: #555;
+    margin-bottom: 16px;
   }
   
   .read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007BFF;
+    font-size: 1rem;
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
   }
   
   .read-more:hover {
