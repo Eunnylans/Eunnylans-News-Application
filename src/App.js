@@ -49,7 +49,7 @@ function App() {
         <div className="loading">Loading...</div>
       ) : (
         <>
-          <Carousel news={news} />
+        <Carousel news={news} />
           <Pagination page={page} nextPage={nextPage} prevPage={prevPage} />
         </>
       )}

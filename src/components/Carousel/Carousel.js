@@ -5,6 +5,10 @@ const Carousel = ({ news }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(true); // State to track if the carousel is open
 
+  if (!news || news.length === 0) {
+    return <div>Limits Reached</div>; // Handle case where news is empty or undefined
+  }
+
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
@@ -25,6 +29,8 @@ const Carousel = ({ news }) => {
     setIsOpen(false); // Close the carousel when the close button is clicked
   };
 
+  const currentNewsItem = news[currentIndex] || {}; // Ensure currentNewsItem is always defined
+
   return (
     isOpen && (
       <div className="carousel-container">
@@ -34,21 +40,25 @@ const Carousel = ({ news }) => {
           </button>
         </div>
         <div className="carousel-item">
-          <img
-            src={news[currentIndex].image_url}
-            alt={news[currentIndex].title}
-            className="news-image"
-          />
-          <h2 className="news-title">{news[currentIndex].title}</h2>
-          <p className="news-description">{news[currentIndex].description}</p>
-          <a
-            href={news[currentIndex].url}
-            className="read-more"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read More
-          </a>
+          {currentNewsItem.image_url && (
+            <img
+              src={currentNewsItem.image_url}
+              alt={currentNewsItem.title}
+              className="news-image"
+            />
+          )}
+          <h2 className="news-title">{currentNewsItem.title}</h2>
+          <p className="news-description">{currentNewsItem.description}</p>
+          {currentNewsItem.url && (
+            <a
+              href={currentNewsItem.url}
+              className="read-more"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read More
+            </a>
+          )}
         </div>
 
         {/* Dot Navigation */}
