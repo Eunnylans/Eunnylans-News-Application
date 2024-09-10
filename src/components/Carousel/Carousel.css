@@ -16,8 +16,8 @@
   
   .news-image {
     width: 100%;
-    height: auto;
-    max-width: 600px; /* Limit the image size */
+    height: 400px;
+    max-width: 1000px; /* Limit the image size */
   }
   
   .news-title {
@@ -75,4 +75,37 @@
     color: white;
   }
   
-  
+/* Media query for general mobile screens */
+@media (max-width: 768px) {
+  .news-image {
+    height: 400px; /* Adjust the height for general mobile devices */
+  }
+}
+
+/* Media query for 414 x 896 (iPhone XR, iPhone 11) */
+@media (max-width: 414px) and (max-height: 896px) {
+  .news-image {
+    height: 400px;
+  }
+}
+
+/* Media query for iPhone 12 and 14 Pro Max (428 x 926) */
+@media (max-width: 428px) and (max-height: 926px) {
+  .news-image {
+    height: 400px;
+  }
+}
+
+/* Media query for 412 x 915 (Pixel 4 XL, similar devices) */
+@media (max-width: 412px) and (max-height: 915px) {
+  .news-image {
+    height: 310px;
+  }
+}
+
+/* Media query for 344 x 882 (Smaller Android devices) */
+@media (max-width: 344px) and (max-height: 882px) {
+  .news-image {
+    height: 380px;
+  }
+}
