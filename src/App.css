@@ -32,11 +32,20 @@ html, body {
 
 /* Adjust the main content to account for the fixed navbar */
 .main-content {
+  flex: 1;
   margin-top: 80px; /* Height of the navbar + some spacing */
+  overflow-y: auto; /* Allow the main content to scroll */
+  padding: 20px; /* Optional padding */
+}
+
+/* Carousel and other scrollable items */
+.carousel-container {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Loading state */
-
 .loading {
   font-size: 1.5rem;
   text-align: center;
